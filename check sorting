@@ -1,0 +1,19 @@
+public class try1 {
+    public static void checkSorting(String str, int i) {
+        if (i < str.length() - 1) {
+            if (str.charAt(i) > str.charAt(i + 1)) {
+                System.out.println("The string is not sorted");
+                System.exit(0); // Terminate the program
+            } else {
+                checkSorting(str, i + 1);
+            }
+        } else {
+            System.out.println("The string is sorted");
+        }
+    }
+
+    public static void main(String[] arg) {
+        String str = "1235";
+        checkSorting(str, 0);
+    }
+}
